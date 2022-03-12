@@ -1,5 +1,5 @@
 ﻿using Laboratorio2.Entities;
-
+/*Esta es la rama dev*/
 public class Program
 {
     private List<Persona> ListaGeneral = new List<Persona>();
