@@ -22,15 +22,15 @@ namespace Laboratorio2.Entities
             throw new NotImplementedException();
         }
 
-        public Profesor()
+        public Profesor():base()
         {
         }
-        
+
         public Profesor (string cui, string cargo, Persona persona): 
         base(persona.UUID, persona.Apellidos, persona.Nombres, persona.Email)
         {
-            CUI = cui;
-            Cargo = cargo;
+            this.CUI = cui;
+            this.Cargo = cargo;
         }
     }
 }

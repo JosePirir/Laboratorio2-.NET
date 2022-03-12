@@ -21,15 +21,15 @@ namespace Laboratorio2.Entities
         {
             throw new NotImplementedException();
         }
-        public Alumno()
+        public Alumno():base()
         {            
         }
 
         public Alumno(string carne, string numeroCreditos, Persona persona):
         base (persona.UUID, persona.Apellidos, persona.Nombres, persona.Email)
         {
-            Carne = carne;
-            NumeroCreditos = numeroCreditos;         
+            this.Carne = carne;
+            this.NumeroCreditos = numeroCreditos;         
         }
     }
 }
