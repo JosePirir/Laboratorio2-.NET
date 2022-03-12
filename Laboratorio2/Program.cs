@@ -2,19 +2,20 @@
 
 public class Program
 {
-    public void OperarRegistro(Persona persona)
+    private List<Persona> ListaGeneral = new List<Persona>();
+    public void OperarRegistro(Persona elemento)
     {
 
     }
-    public void RegistrarAsistencia(Persona persona)
+    public void RegistrarAsistencia(Persona elemento)
     {
 
     }
-    public void VerMisDatos(Persona persona)
+    public void VerMisDatos(Persona elemento)
     {
 
     }
-    public void QuitarAsignatura(Persona persona)
+    public void QuitarAsignatura(Persona elemento)
     {
 
     }
