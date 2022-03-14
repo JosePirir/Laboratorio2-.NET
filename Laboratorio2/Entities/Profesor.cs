@@ -9,25 +9,26 @@ namespace Laboratorio2.Entities
 
         public override void TomarAsistencia()
         {
-
+            Console.WriteLine($"Tomando asistencia {this.Apellidos} {this.Nombres}");
         }
 
         public void ListarMisDatos(string identificador)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{this.UUID} {this.Apellidos} {this.Nombres} {this.Cargo}");
         }
 
         public bool EliminarAsignatura(string asignatura)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Se ha eliminado la asignatura {this.Apellidos} {this.Nombres}");
+            return true;
         }
 
         public Profesor():base()
         {
         }
 
-        public Profesor (string cui, string cargo, Persona persona): 
-        base(persona.UUID, persona.Apellidos, persona.Nombres, persona.Email)
+        public Profesor (string uuid, string apellidos, string nombres, string email, string cui, string cargo):
+        base(uuid, apellidos, nombres, email)
         {
             this.CUI = cui;
             this.Cargo = cargo;

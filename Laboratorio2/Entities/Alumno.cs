@@ -5,31 +5,32 @@ namespace Laboratorio2.Entities
     public class Alumno : Persona, IOperaciones
     {
         public string Carne {get;set;}
-        public string NumeroCreditos{get;set;}
+        public int NumeroCreditos{get;set;}
 
         public bool EliminarAsignatura(string asignatura)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Se ha eliminado la asignatura de {this.Apellidos} {this.Nombres}, Perderá la cantidad de {this.NumeroCreditos} creditos.");
+            return true;
         }
 
         public void ListarMisDatos(string identificador)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{this.UUID} {this.Apellidos} {this.Nombres} {this.NumeroCreditos}");
         }
 
         public override void TomarAsistencia()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Tomando asistencia {this.Apellidos} {this.Nombres}");
         }
         public Alumno():base()
         {            
         }
 
-        public Alumno(string carne, string numeroCreditos, Persona persona):
-        base (persona.UUID, persona.Apellidos, persona.Nombres, persona.Email)
+        public Alumno(string uuid, string apellidos, string nombres, string email, string carne, int numeroCreditos):
+        base (uuid, apellidos, nombres, email)
         {
             this.Carne = carne;
-            this.NumeroCreditos = numeroCreditos;         
+            this.NumeroCreditos = numeroCreditos;
         }
     }
 }
